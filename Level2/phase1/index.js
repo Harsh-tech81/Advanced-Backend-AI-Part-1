@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./lib/db.js";
 import User from "./model/user.model.js";
 import Redis from "ioredis";
-import {rateLimiter} from './middleware/rateLimiting.js'
+import rateLimiter from './middleware/rateLimiting.js'
 
 const app = express();
 dotenv.config();
