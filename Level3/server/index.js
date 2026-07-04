@@ -13,9 +13,9 @@ app.use(express.json());
 export const redis = new Redis(process.env.REDIS_URL);
 
 const PORT = process.env.PORT || 5000;
-
+const SERVER_NAME = process.env.SERVER_NAME || "Server";
 app.get("/", (req, res) => {
-  return res.status(200).json({ message: "Hello, from Nginx as a Load Balancer !" });
+  return res.status(200).json({ message: `Hello from Nginx Server ${SERVER_NAME}` });
 });
 // wihtout Queue(BullMQ) SignUp API 
 app.post("/create", async (req, res) => {
