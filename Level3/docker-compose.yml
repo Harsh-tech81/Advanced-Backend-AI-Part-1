@@ -5,4 +5,11 @@ services:
        - 8000:80
      volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-  
+
+
+   server:
+     build: ./server
+     ports:
+       - 5000:7000
+     env_file:
+       - ./server/.env
