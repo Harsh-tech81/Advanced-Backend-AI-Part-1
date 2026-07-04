@@ -1,1 +1,4 @@
 we use autocannon to make the chart of the data How much load on the server to test it 
+we use API Gateway after laod Balancer basically Load Balancer maps to API Gateway then API Gateway proceeds to different servers according to the route API's Call as for /auth , /order-placed, /payment all three are handled by three diff servers (appropriate backend servers ko map krta h curr user ke req ke according )
+Microservices m hmlog alag alag kaam ke liye alag servers banate h using API Gateway 
+jbb hmare pass ek he server tha jo sara cheez handle krta tha auth,order-placed and payment all are handled by the single server then that is called as the Monolith 
